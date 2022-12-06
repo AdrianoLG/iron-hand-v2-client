@@ -1,9 +1,191 @@
+:root {
+  color-scheme: light;
+  /* Color styles */
+  --primary: #011c40;
+  --secondary: #f2e1ac;
+  --gray-light: #959595;
+  --gray: #555;
+  --green-light: #71a66f;
+  --orange-dark: #f26d3d;
+  --orange-darker: #7c2100;
+  --yellow-light: #faf8f3;
+  --yellow-dark: #f2e1ac;
+  --white: #fff;
+
+  /* Font sizes */
+  --xsmall: 0.69rem;
+  --small: 0.88rem;
+  --base: 1rem;
+  --medium: 1.12rem;
+  --large: 1.38rem;
+}
+html.dark {
+  color-scheme: dark;
+  /* Color styles */
+  --primary: #f2e1ac;
+  --secondary: #011c40;
+  --gray-light: #777;
+  --gray: #c0c0c0;
+  --green-light: #71a66f;
+  --orange-dark: #f26d3d;
+  --orange-darker: #71a66f;
+  --yellow-light: #7c2100;
+  --yellow-dark: #011c40;
+  --white: #222;
+
+  /* Font sizes */
+  --xsmall: 0.69rem;
+  --small: 0.88rem;
+  --base: 1rem;
+  --medium: 1.12rem;
+  --large: 1.38rem;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Heebo', sans-serif;
+}
+
+body {
+  line-height: 1;
+}
+
+main {
+  padding: 3rem 1rem;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 a {
@@ -15,6 +197,11 @@ a {
   box-sizing: border-box;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -23,4 +210,26 @@ a {
     color: white;
     background: black;
   }
+}
+
+.submenu {
+  display: flex;
+  gap: 1rem;
+}
+.submenu-bar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+.submenuButton:hover,
+.submenuButton.active {
+  border: 1px solid var(--orange-dark);
+  color: var(--orange-dark);
+}
+.submenuButton {
+  border: 1px solid var(--gray);
+  color: var(--gray);
+  padding: 0.5rem 1.25rem;
 }

@@ -1,0 +1,40 @@
+.footer {
+  background: var(--orange-darker);
+  bottom: 0;
+  padding: 3rem 1rem;
+  position: absolute;
+  width: 100%;
+}
+.footer h1 {
+  color: var(--yellow-dark);
+  font-size: var(--large);
+  font-weight: bold;
+  transition: color 0.15s ease-out;
+}
+.footer h1:hover {
+  color: var(--white);
+  transition: color 0.25s ease-in;
+}
+.footer nav ul {
+  display: flex;
+}
+.footer nav li {
+  color: var(--yellow-dark);
+  margin-left: 1rem;
+  transition: color 0.15s ease-out;
+}
+.footer nav li a {
+  padding: 0.5rem;
+}
+.footer nav li a:hover,
+.footer nav li .active {
+  color: var(--white);
+  transition: color 0.25s ease-in;
+}
+.footer .container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1600px;
+}
